@@ -1,3 +1,5 @@
+https://github.com/AaronMaywood/WebCodingTextbook に掲載する予定のコード集として制作しています
+
 # coding_sample
 
 
