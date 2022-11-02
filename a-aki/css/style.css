@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+* {
+	font-family: serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+/*
+https://unsplash.com/ja/%E5%86%99%E7%9C%9F/Al0geA4zDqw
+*/
+	background: url('https://images.unsplash.com/photo-1590005240700-39f39861fa6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80');
+	background-size: cover;
+	background-position: 0 -100px;
+	height: 300px;
+}
+
+h1 {
+	padding-top: 2rem;
+	font-size: 5rem;
+	color: white;
+	text-align: center;
+}
+
+.author {
+	margin-right: 5rem;
+	font-size: 3rem;
+	color: white;
+	text-align: right;
+}
+
+.contents {
+	padding: 5rem;
+	background: rgba(255,255,0,0.05);	/* とっても薄い黄色、文庫本の紙の色のイメージ */
+}
+
+p {
+	font-size: 2rem;
+	line-height: 5rem;
+}
+
+p img {
+	margin: 3rem;
+}
+
+p img.right {
+	float: right;
+}
+
+p img.left {
+	float: left;
+}
+
+hr {
+	margin-top: 10rem;
+	margin-bottom: 5rem;
+}
+
+footer {
+	clear: both;
+}
+
+footer p {
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
