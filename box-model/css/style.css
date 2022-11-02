@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.memo {
+	border: 1px solid gray;
+	border-left: 4px solid #0064b6;
+	padding: 1rem;
+	padding-left: 2rem;
+	width: 40rem;
+	margin: 3rem auto;
+	background: lightyellow;
+
+	/* 角丸にするこの一行を加えてみて下さい。かなりいい感じになります。 */
+	/* border-radius: 4px; */
+}
+
+ul {
+	margin: 1rem 0;
+	font-size: 0.8rem;
+}
+
+.color1 {
+	color: gray;
+}
+
+.color2 {
+	color: #0064b6;
+}
+
+.container {
+	border: 2px solid red;
+	width: 800px;
+}
+

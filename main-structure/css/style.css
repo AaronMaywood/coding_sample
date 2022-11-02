@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*
+HTMLで作成した大規模構造をWikipediaのレイアウトになるようにGrid Layoutを使用して配置
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	/* See: https://developer.mozilla.org/ja/docs/Web/CSS/grid-template */
+	grid-template:
+		"head head head" 5rem
+		"side main main" 15rem / 1fr 1fr 1fr;
+}
+
+header.mw-header {
+	grid-area: head;
+	background: palegreen;
+	/* display: grid; は内部表現なので、自身がgrid-itemであってもその内部に新たにgridを設けることができる */
+	display: grid;
+	grid-template:
+		"info info info user" 100% / 1fr 1fr 1fr 1fr;
+}
+
+/* grid-area:userはこの親nav.mw-headerを検索する。親の親bodyではない。display:gridが波及するのは子だけであり、孫は含まない */
+nav.vector-user-links {
+	grid-area: user;
+	align-self: center;
+		/*
+		align-self: center; で縦方向に中央寄せする
+		https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E8%BB%B8%E4%B8%8A%E3%81%A7%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%81%AE%E9%85%8D%E7%BD%AE
+		*/
+	background: lightpink;
+	height: 3rem;
+}
+
+nav.sidebar-toc {
+	grid-area: side;
+	background: lightyellow;
+}
+
+main {
+	grid-area: main;
+	background: lightblue;
+}

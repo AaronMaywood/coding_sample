@@ -1,0 +1,43 @@
+/* */
+.memo0 {
+	margin: 32 0;
+	border: 1px solid #cdcdcd;
+	border-left: 4px solid #0064b6;
+	border-radius: 4px;
+	background: rgba(0,133,242,.1);
+	position: relative;
+}
+.memo0 .l{
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+}
+.memo0 .l2{
+	padding: 1rem;
+	padding-left: 3rem;
+}
+
+/* original */
+.memo {
+	margin: 32 0;
+	border: 1px solid #cdcdcd;
+	border-left: 4px solid #0064b6;
+	border-radius: 4px;
+	padding: 1rem;
+	padding-left: 3rem;
+	background: rgba(0,133,242,.1);
+	position: relative;
+}
+
+.memo::before {
+	content: "";
+	background: url(https://developer.mozilla.org/static/media/note-info.0eafb6e7738509bce66e.svg);
+	display:block;
+	height: 1rem;
+	position: absolute;
+	left: 1rem;
+	top: 1.5rem;
+	width: 1rem;
+}
+
+
