@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* TODO ホバーで文字が浮かぶエフェクトをどう実現しているのかが謎 ←時間がないので後回しにする！！ */
+/* TODO flex を使用して高さ中央にする */
+.transform {
+	background: linear-gradient(0deg, #f00 0%, #111 66%, #111 100%);
+	background-size: 100% 200%;
+    transition: background-size .48s cubic-bezier(0.39, 0.575, 0.565, 1);
+	height: 800px;
+}
+
+.transform:hover {
+	background-size: 100% 100%;
+}
+
+.transform p {
+	color: white;
+	font-size: 10rem;
+	text-align: center;
+	padding: 200px;
+}
