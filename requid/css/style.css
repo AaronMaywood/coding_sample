@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.requid1 {
+	width: 80%;
+	margin: 0 auto;
+	height: 800px;
+	background: blue;
+	color: white;
+}
+
+.requid2 {
+	width: 60%;
+	margin: 0 auto;
+	height: 700px;
+	background: green;
+	color: white;
+}
