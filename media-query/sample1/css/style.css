@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+body {
+	background: lightgreen;
+}
+
+@media (max-width: 600px) {
+	body {
+		background: blue;
+		color: white;
+	}
+}
