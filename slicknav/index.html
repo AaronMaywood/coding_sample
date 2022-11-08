@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet">
+	<title>slicknavのデモ</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+TODO まだ仕組みがわかっていない
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link rel="stylesheet" href="SlickNav-1.0.10/dist/slicknav.css" />
+	<script src="SlickNav-1.0.10/dist/jquery.slicknav.min.js"></script>
+	<style>
+		body {
+			background: #888;
+		}
+
+		.slicknav_menu {
+			display:none;
+		}
+
+		@media screen and (max-width: 600px) {
+			/* #menu is the original menu */
+			#menu {
+				display:none;
+			}
+
+			.slicknav_menu {
+				display:block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="#features">Features</a></li>
+		<li><a href="#usage">Usage Instructions</a></li>
+		<li><a href="#examples">Examples</a></li>
+		<li><a href="http://github.com">View on Github</a></li>
+	</ul>
+	<script>
+		$(function(){
+			$('#menu').slicknav();
+		});
+	</script>
+</body>
+</html>
