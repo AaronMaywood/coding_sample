@@ -1,6 +1,12 @@
 @charset "utf-8";
 
-.requid1 {
+body {
+	width: 90%;
+	border: 5px dashed orange;
+	margin: 0 auto;
+}
+
+.liquid1 {
 	width: 80%;
 	margin: 0 auto;
 	height: 800px;
@@ -8,7 +14,7 @@
 	color: white;
 }
 
-.requid2 {
+.liquid2 {
 	width: 60%;
 	margin: 0 auto;
 	height: 700px;
