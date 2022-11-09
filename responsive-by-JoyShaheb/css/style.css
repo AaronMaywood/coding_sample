@@ -41,8 +41,13 @@ Design System のメモ
 .when-mobile { display: none; }
 
 body {
-	width: 1440px;
+	/* リキッド */
+	width: 100%;
+	max-width: 1440px;
+
+	/* 中央寄せ */
 	margin: 0 auto;
+
 	/* 全体の規定フォントを設定 */
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
@@ -54,8 +59,13 @@ header.page-header {
 }
 
 header .wrapper {
-	width: 1175px;
+	/* リキッド */
+	width: 80%;
+	max-width: 1175px;
+
+	/* 中央寄せ */
 	margin: 0 auto;
+
 	/* 縦方向で真ん中に寄せるために、まず高さを指定して、display:flexとalign-items:centerを利用します */
 	height: 123px;
 	display: flex;
@@ -112,7 +122,11 @@ header.main-header .desc {
 }
 
 ul.works {
-	width: 1187px;
+	/* リキッド */
+	width: 80%;
+	max-width: 1187px;
+
+	/* 中央寄せ */
 	margin: 0 auto;
 
 	list-style: none;
@@ -120,6 +134,12 @@ ul.works {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 55px;
+}
+
+ul.works img {
+	/* リキッド */
+	width: 100%;
+	max-width: 570px;
 }
 
 button {
@@ -143,9 +163,15 @@ footer {
 }
 
 footer .wrapper {
-	width: 1178px;
 	height: 125px;
+
+	/* リキッド */
+	width: 80%;
+	max-width: 1178px;
+
+	/* 中央寄せ */
 	margin: 0 auto;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -162,6 +188,12 @@ footer small {
 	font-size: 20px;
 }
 
+/*
+モバイルデバイス用 
+
+MEMO このソースではこのサイズより小さい時には固定とし、リキッドを考慮しない
+
+*/
 @media (max-width: 375px) {
 
 	.when-desktop { display: none; }
@@ -207,7 +239,6 @@ footer small {
 	}
 	
 	ul.works img {
-		width: 100%;
 		height: 197px;
 	}
 
