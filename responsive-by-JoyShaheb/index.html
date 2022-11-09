@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Website Tutorial For Beginners - by JoyShaheb</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- Google Fonts で発行したコードスニペット -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="page-header">
+		<div class="wrapper">
+			<h1><img class="logo" src="images/logo.svg" width="70" height="48" alt="">Start</h1>
+			<div class="when-desktop">
+				<nav>
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Portfolio</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="when-mobile">
+				<!-- TODO ドロワーの引き出しはa でいいか？ -->
+				<a href="">
+					<img src="images/hamburger.svg" width="35" height="35" alt="グローバルナビゲーションを引き出します。">
+				</a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<article>
+			<header class="main-header">
+				<p class="lead">WORKS</p>
+				<h2>Portfolio</h2>
+				<p class="desc">Lorem ipsum, doler sit amet consectetur adipisicing elit.</p>
+			</header>
+			<ul class="works">
+				<li><a href=""><img src="images/works/1.svg" width="570" height="335" alt="作品番号１、Landing Pageです。"></a></li>
+				<li><a href=""><img src="images/works/2.svg" width="570" height="335" alt="作品番号２、Landing Pageです。"></a></li>
+				<li><a href=""><img src="images/works/3.svg" width="570" height="335" alt="作品番号３、Web Designです。"></a></li>
+				<li><a href=""><img src="images/works/4.svg" width="570" height="335" alt="作品番号４、Web Designです。"></a></li>
+				<li><a href=""><img src="images/works/5.svg" width="570" height="335" alt="作品番号５、Web Designです。"></a></li>
+				<li><a href=""><img src="images/works/6.svg" width="570" height="335" alt="作品番号６、Web Designです。"></a></li>
+				<li><a href=""><img src="images/works/7.svg" width="570" height="335" alt="作品番号７、Web Designです。"></a></li>
+				<li><a href=""><img src="images/works/8.png" width="570" height="335" alt="作品番号８、Web Designです。"></a></li>
+			</ul>
+			<!-- button要素 https://developer.mozilla.org/ja/docs/Web/HTML/Element/button -->
+			<button>
+				<p>Learn More</p>
+			</button>
+		</article>
+	</main>
+	<footer>
+		<div class="wrapper">
+			<ul class="sns">
+				<li><a href="" target="_blank"><img src="images/sns/facebook.svg" height="18" alt="Facebook"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/instagram.svg" height="18" alt="Instagram"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/twitter.svg" height="18" alt="Twitter"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/pinterest.svg" height="18" alt="Pinterest"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/tiktok.svg" height="18" alt="TikTok"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/whatsapp.svg" height="18" alt="WhatsApp"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/youtube.svg" height="18" alt="YouTube"></a></li>
+			</ul>
+			<p><small>© Start, 2022. All rights reserved.</small></p> <!-- small要素 https://developer.mozilla.org/ja/docs/Web/HTML/Element/small -->
+		</div>
+	</footer>
+</body>
+</html>
