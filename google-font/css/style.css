@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.crimson-text {
+	font-family: 'Crimson Text', serif;
+}
+
+.work-sans {
+	font-family: 'Work Sans', sans-serif;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.font-weight-desc {
+	background: lightyellow;
+	padding: 0 0.5rem;
+}
