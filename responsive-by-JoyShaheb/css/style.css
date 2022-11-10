@@ -1,41 +1,33 @@
 @charset "utf-8";
 
+/*
+Design System のメモ
+
+1. Font
+ - 'Work Sans'
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;	regular
+	font-weight: 500;	medium
+	font-weight: bold;	BOLD(700)
+ - "Crimson Text"
+	font-family: "Crimson Text", serif;
+	font-weight: bold;	BOLD(700)
+2. Color
+	background: #74C69D;	ミントグリーン
+	background: #212529;	ボタンの黒
+*/
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* [TODO] 必要があれば検討
-img {
-	vertical-align: bottom;
-}
-*/
-
 a {
 	text-decoration: none;
 	color: white;
-	font-size: 20px;	/* TODO 単位をpxじゃなくする. remを検討せよ */
+	font-size: 20px;	/* TODO 単位をpxじゃなくする. remを検討せよ. https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
 }
-/*
-[TODO] aのLVHA順、必要であれば
-https://developer.mozilla.org/ja/docs/Web/CSS/:hover
-a:link,a:visited,a:active {
-}
-a:hover {
-}
-*/
-
-/*
-Design System のメモ
-.medium {
-	font-weight: 500;
-}
-
-.bold {
-	font-weight: bold;
-}
-*/
 
 .when-desktop { display: block; }
 .when-mobile { display: none; }
