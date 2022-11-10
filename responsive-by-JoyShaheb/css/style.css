@@ -3,18 +3,26 @@
 /*
 Design System のメモ
 
-1. Font
- - 'Work Sans'
+1. Font Family
+  - 'Work Sans'
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;	regular
 	font-weight: 500;	medium
 	font-weight: bold;	BOLD(700)
- - "Crimson Text"
+  - "Crimson Text"
 	font-family: "Crimson Text", serif;
 	font-weight: bold;	BOLD(700)
-2. Color
-	background: #74C69D;	ミントグリーン
-	background: #212529;	ボタンの黒
+2. Font Size
+  - 40px ... 2.5rem
+  - 30px ... 1.875rem
+  - 24px ... 1.5rem
+  - 20px ... 1.25rem
+  - 16px ... 1rem
+3. Color
+  - background: #74C69D;	ミントグリーン
+  - background: #212529;	ボタンの黒
+4. Breakpoints
+  - 375px以下でmobile
 */
 
 * {
@@ -26,7 +34,7 @@ Design System のメモ
 a {
 	text-decoration: none;
 	color: white;
-	font-size: 20px;	/* TODO 単位をpxじゃなくする. remを検討せよ. https://developer.mozilla.org/ja/docs/Web/CSS/font-size */
+	font-size: 1.25rem;	/* 20px */
 }
 
 .when-desktop { display: block; }
@@ -105,11 +113,11 @@ header.main-header .lead {
 header.main-header h2 {
 	font-family: "Crimson Text", serif;
 	font-weight: bold;
-	font-size: 40px;
+	font-size: 2.5rem;	/* 40px */
 }
 
 header.main-header .desc {
-	font-size: 20px;
+	font-size: 1.25rem;	/* 20px */
 	line-height: 1.25;	/* font-sizeの125% */
 }
 
@@ -146,7 +154,7 @@ button {
 
 button p {
 	color: white;
-	font-size: 20px;
+	font-size: 1.25rem;	/* 20px */
 }
 
 footer {
@@ -177,7 +185,7 @@ footer ul.sns {
 }
 
 footer small {
-	font-size: 20px;
+	font-size: 1.25rem;	/* 20px */
 }
 
 /*
@@ -222,7 +230,7 @@ MEMO このソースではこのサイズより小さい時には固定とし、
 	}
 
 	header.main-header h2 {
-		font-size: 24px;
+		font-size: 1.5rem;	/* 24px */
 	}
 
 	ul.works {
