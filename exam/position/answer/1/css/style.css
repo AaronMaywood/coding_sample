@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.container {
+	border: 10px solid gray;
+	width: 500px;
+
+	/* 答え */
+	position: relative;
+}
+
+.target {
+	background: lightgreen;
+	width: 100px;
+	height: 100px;
+	padding: 1rem;
+	margin: 1rem;
+
+	/* 答え */
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}

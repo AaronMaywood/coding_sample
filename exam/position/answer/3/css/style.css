@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.leftside-menu {
+	background: lightyellow;
+	width: 300px;
+	height: 100%;
+	padding: 3rem;
+	position: fixed;
+
+	/* 答え */
+	height: 100%;
+	position: fixed;
+}
+
+.container {
+	border: 10px solid gray;
+	width: 500px;
+	margin: 0 auto;
+}

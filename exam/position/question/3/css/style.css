@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.leftside-menu {
+	background: lightyellow;
+	width: 300px;
+	padding: 3rem;
+
+	/* 以下にCSSを追加せよ */
+
+
+
+}
+
+.container {
+	border: 10px solid gray;
+	width: 500px;
+	margin: 0 auto;
+}

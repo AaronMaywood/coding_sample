@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.container {
+	border: 10px solid gray;
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 3rem;
+
+	/* 以下にCSSを追加せよ */
+
+
+
+}
+
+.target {
+	background: lightgreen;
+	width: 100px;
+	height: 100px;
+	padding: 1rem;
+	margin: 1rem;
+
+	/* 以下にCSSを追加せよ */
+
+
+
+}
