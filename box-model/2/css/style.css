@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.outer {
+	width: 800px;
+	margin: 0 auto;
+	border-right: 1px solid black;
+	border-top: 5px dotted green;
+	border-bottom: 10px double blue;
+}
+
+.inner {
+	margin: 3rem;
+	border-top: 3px dashed black;
+	border-bottom: 3px solid pink;
+	border-left: 5px solid black;
+}

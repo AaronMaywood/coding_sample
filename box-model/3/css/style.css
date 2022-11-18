@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.one,.two,.three {
+	border: 3px solid black;
+}
+
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+	background: yellow;
+	border: 1px solid red; /* TODO これを入れた時と外したときで黄色の背景塗りつぶしエリアの大きさが変わる、不思議だ、説明できない */
+}
+
+/*
+数字から始まるクラス名を使用できないことに注意。
+class="1" やclass="1box" はNGです。
+class="one" やclass="box1" はOKです。
+*/
+.one {
+	margin: 0 2rem;
+	margin-top: 3rem;
+}
+
+.two {
+	margin: 8rem;
+}
+
+.three {
+	margin: 0;
+	margin-bottom: 3rem;
+}
+
