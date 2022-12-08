@@ -7,7 +7,7 @@
 <style>
 p {
 	border: 1px solid blue;
-	width: 30px;
+	width: 2rem;
 }
 
 .wrapper1 div {
@@ -22,7 +22,7 @@ p {
 
 .wrapper3 div {
 	border: 1px dashed red;
-	display: inline-block;
+	display: inline;
 }
 </style>
 </head>
@@ -43,8 +43,11 @@ p {
 	</section>
     <section class="wrapper3">
 	    <h2>inline-block ...内側はブロックレベルとしてpが配置され、それ全体はインラインとなります。つまり「あいうえお」をまるで一文字かのように扱い、一行になります。（文字数は「（あいうえお）（あいうえお）かきく」の５文字）</h2>
+		<p>
 		divの中はブロックレベルとなり、そのなかにpによって３つの「あい」「うえ」「お」ブロックが縦に並びます。しかし、divの外見はインラインとして扱われ、横に並びます。これを言い換えると、divのなかに書いたすべてのものをまとめて、それ自身はインラインの「一文字」として横に並べられます。
 		inline-block は対象を一文字として扱います。
+		</p>
+		abc
 		<div>あい<p>うえ</p>お</div>
 		<div>あい<p>うえ</p>お</div>
 		かきく
