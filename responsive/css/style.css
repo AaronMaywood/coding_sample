@@ -20,7 +20,7 @@ body {
 header.mw-header {
 	grid-area: head;
 	background: palegreen;
-	/* display: grid; は内部表現なので、自身がgrid-itemであってもその内部に新たにgridを設けることができる */
+	/* display: grid; は内部表現なので、自身がgrid-itemであってもその内部に新たにgridを設けることができる→TODO subgridとの違いはなんだろう？ */
 	display: grid;
 	grid-template:
 		"info info info user" 100% / 1fr 1fr 1fr 1fr;
