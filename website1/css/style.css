@@ -1,0 +1,529 @@
+@charset "utf-8";
+
+/*
+Design System のメモ
+
+1. Font Family
+  - 'Work Sans'
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;	regular
+	font-weight: 500;	medium
+	font-weight: bold;	BOLD(700)
+  - "Crimson Text"
+	font-family: "Crimson Text", serif;
+	font-weight: bold;	BOLD(700)
+  - "Roboto": 400;		regular
+2. Font Size
+	フォントサイズの計算方法(1rem = 16pxとして)
+	1px = 1rem / 16 = 1/16 rem = 0.0625rem.
+	ほしいpx * 0.0625 = 必要なrem値 となる
+	例)
+		40px * 0.0625 = 2.5rem
+  - 40px ... 2.5rem
+  - 30px ... 1.875rem
+  - 24px ... 1.5rem
+  - 20px ... 1.25rem
+  - 16px ... 1rem
+  - 15px ... 0.9375rem
+3. Color
+  - background: #74C69D;	ミントグリーン
+  - background: #212529;	ボタンの黒
+4. Breakpoints
+  - 375px以下でmobile
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ボタンのリセット ... https://qiita.com/nabettu/items/1593af04e48444c45c53 より */
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.25rem;	/* 20px */
+}
+
+/* resetここまで */
+
+.when-desktop { display: block; }
+.when-mobile { display: none; }
+
+body {
+	/* リキッド */
+	width: 100%;
+	max-width: 1440px;
+
+	/* 中央寄せ */
+	margin: 0 auto;
+
+
+	/* 全体の規定フォントを設定 */
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+header.page-header {
+	background: #74C69D;
+	color: white;
+	padding-bottom: 2rem;
+}
+
+header.page-header .wrapper {
+	/* リキッド */
+	width: 80%;
+	max-width: 1175px;
+
+	/* 中央寄せ */
+	margin: 0 auto;
+
+	/* 縦方向で真ん中に寄せるために、まず高さを指定して、display:flexとalign-items:centerを利用します */
+	height: 123px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header.page-header .wrapper h1 {
+	font-weight: 500;
+	/* 縦方向で真ん中に寄せるために、display:flexとalign-items:centerを利用します */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style: none;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+article {
+	text-align: center;		/* インライン要素であるbuttonを中央寄せ */
+}
+
+header.main-header {
+	display: flex;
+	flex-direction: column; /* 主軸を縦方向にし、flex itemを縦に並べる */
+	gap: 16px;				/* flex item間の隙間 */
+
+	/* ボックスを中央寄せ */
+	width: 411px;
+	margin: 20px auto 80px;	/* top:20px, bottom:80px */
+	/* 内容も中央寄せ */
+	text-align: center;
+}
+
+header.main-header .lead {
+	color: #74C69D;
+	font-weight: bold;
+}
+
+header.main-header h2 {
+	font-family: "Crimson Text", serif;
+	font-weight: bold;
+	font-size: 2.5rem;	/* 40px */
+}
+
+header.main-header .desc {
+	font-size: 1.25rem;	/* 20px */
+}
+
+header .card {
+	/* リキッド */
+	width: 80%;
+	max-width: 1175px;
+	margin: 0 auto;
+	
+	display:grid;
+	/* 左右に二等分するエリア */
+	grid-template-areas: "description thumbnail";	/* エリアに名前を与えて */
+	grid-template-columns: 1fr 1fr;				/* エリアの幅の大きさを等分とする */
+	align-items: center;
+}
+
+header .card .description {
+	grid-area: description;
+	/*
+	アイテム間に24pxの隙間をあてたいためにflexを使用
+	（24pxのマージンを与えるよりもスッキリ記述できる）
+	*/
+	display:flex;
+	flex-direction: column;
+	gap: 1.5rem;		/* 24px */
+}
+
+header .card .description .lead {
+	font-weight: bold;
+	font-size: 1rem;	/* 16px */
+}
+
+header .card .description .heading {
+	font-family: "Crimson Text", serif;
+	font-weight: bold;
+	font-size: 2.5rem;	/* 40px */
+}
+
+header .card .description .summary {
+	font-size: 0.9375rem;	/* 15px */
+	color: white;
+}
+
+header .card .description button {
+	width: 10rem;
+	height: 3rem;
+	border-radius: 3px;
+	font-size: 1.25rem;	/* 20px */
+	background: white;
+}
+
+header .card .description button p {
+	color: black;
+}
+
+header .card .thumbnail {
+	grid-area: thumbnail;
+	width: 100%;		/* この行を外してみるとこの行の意味が分かるはず。（セルの幅を左右均等にするためのもの） */
+}
+
+.flex-column1 {
+	margin: 60px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.pertners {
+	text-align: center;
+	padding: 0 2rem;
+}
+
+.pertners .flex-column2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 55px;
+}
+
+.pertners header {
+	max-width: 30rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.pertners header .lead {
+	color: #74C69D;
+	font-weight: bold;
+}
+
+.pertners header h2 {
+	font-family: "Crimson Text", serif;
+	font-weight: bold;
+	font-size: 2.5rem;	/* 40px */
+}
+
+.pertners header .desc {
+	font-size: 1.25rem;	/* 20px */
+}
+
+.pertners ul {
+	margin: 0 2rem;			/* 折り返される寸前、画像の左右に確保する余白 */
+	list-style: none;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center; /* 折り返されたアイテムが画面中央に表示されるように */
+	gap: 68px;
+}
+
+/* header .card と同様の構造 */
+.card {
+	/* リキッド */
+	width: 80%;
+	max-width: 1175px;
+	margin: 0 auto;
+
+	display:grid;
+	/* 左右に二等分するエリア（均等割ではなく、偏りがある） */
+	grid-template-areas: "thumbnail description";	/* エリアに名前を与えて */
+	grid-template-columns: 1fr 30%;				/* エリアの幅の大きさに偏りをもたせる */
+	align-items: center;
+	gap: 100px;
+}
+
+.card .description {
+	grid-area: description;
+	display:flex;
+	flex-direction: column;
+	gap: 1.5rem;		/* 24px */
+}
+
+.card .description h2 {
+	font-family: "Crimson Text", serif;
+	font-weight: bold;
+	font-size: 2.5rem;	/* 40px */
+}
+
+.card .description .summary {
+	font-size: 0.9375rem;	/* 15px */
+	color: #21252980;
+}
+
+.card .thumbnail {
+	grid-area: thumbnail;
+	width: 100%;
+}
+
+.topic2 .card {
+	grid-template-areas: "description thumbnail";	/* .topic1とは逆 */
+	grid-template-columns: 30% 1fr;
+}
+
+.team {
+	text-align: center;
+}
+
+/* pertners と共通 */
+.team .flex-column2 {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 55px;
+}
+
+.team header {
+	max-width: 30rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.team header .lead {
+	color: #74C69D;
+	font-weight: bold;
+}
+
+.team header h2 {
+	font-family: "Crimson Text", serif;
+	font-weight: bold;
+	font-size: 2.5rem;	/* 40px */
+}
+
+.team header .desc {
+	font-size: 1.25rem;	/* 20px */
+}
+
+.team ul {
+	margin: 0 2rem;			/* 画像の左右に確保する余白、幅を潰した時に効果あり */
+	list-style: none;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center; /* 折り返されたアイテムが画面中央に表示されるように */
+	gap: 68px;
+}
+
+.avatar {
+	width: 252px;
+	padding: 20px 25px;
+	box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	text-align: left;
+	/* 左右中央寄せ */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.avatar .column {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 19px;
+}
+
+.avatar .name {
+	font-family: "Crimson Text", serif;
+	font-weight: bold;
+	font-size: 1.5rem; /* 24px */
+}
+
+.avatar .position {
+	font-size: 0.9375rem;	/* 15px */
+	color: #212529BF;		/* 末尾のBFはアルファ値75%の意味(Figmaより取得) */
+}
+
+button {
+	background: #212529;
+	border-radius: 5px;
+	width: 170px;
+	height: 48px;
+}
+
+button p {
+	color: white;
+	font-size: 1.25rem;	/* 20px */
+}
+
+footer {
+	background: #74C69D;
+	color: white;
+}
+
+footer .wrapper {
+	height: 125px;
+
+	/* リキッド */
+	width: 80%;
+	max-width: 1178px;
+
+	/* 中央寄せ */
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer ul.sns {
+	display: flex;
+	gap: 20px;
+	width: 243px;
+	list-style: none;
+}
+
+footer small {
+	font-size: 1.25rem;	/* 20px */
+}
+
+/*
+モバイルデバイス用 
+
+MEMO このソースではこのサイズより小さい時には固定とし、リキッドを考慮しない
+
+*/
+@media (max-width: 375px) {
+
+	.when-desktop { display: none; }
+	.when-mobile { display: block; }
+
+	body {
+		width: 375px;
+	}
+
+	header .wrapper {
+		width: 335px;
+		height: 70px;
+	}
+
+	header .wrapper h1 {
+		font-weight: 500;
+		/* 縦方向で真ん中に寄せるために、display:flexとalign-items:centerを利用します */
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header .logo {
+		width: 45px;
+	}
+
+	header.main-header {
+		width: 335px;
+		margin: 36px auto 36px;	/* top:36px, bottom:36px */
+	}
+
+	header.main-header h2 {
+		font-size: 1.5rem;	/* 24px */
+	}
+
+	footer {
+		height: 125px;
+		display: flex;
+		align-items: center;
+	}
+	
+	footer .wrapper {
+		width: 100%;
+		height: 63px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+}
+
+/*
+部品単位のブレークポイント
+730px以下でヘッダーとフッターを切り替え
+
+ここに書いたスタイル指定は、モバイルデバイス用(max-width: 375px)から
+コピペしてきた。
+モバイルデバイス用からは消してかまわないが、モバイルデバイス用として作成したものに由来することを示すためにモバイルデバイス用の方にも残してある
+*/
+
+@media (max-width: 730px) {
+
+	.when-desktop { display: none; }
+	.when-mobile { display: block; }
+
+	header .card {
+		grid-template-areas:
+			"thumbnail"
+			"description";	/* エリアを縦に */
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	header .card .description .heading {
+		font-size: 1.75rem; /* 28px */
+	}
+
+	header .card .thumbnail {
+		height: 100%;
+	}
+
+	.card .thumbnail {
+		height: 100%;
+	}
+
+	.card,
+	.topic2 .card {
+		grid-template-areas:
+			"thumbnail"
+			"description";	/* エリアを縦に */
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.card .description h2 {
+		font-family: "Crimson Text", serif;
+		font-weight: bold;
+		font-size: 1.5rem;	/* 24px */
+	}
+
+	footer {
+		height: 125px;
+		display: flex;
+		align-items: center;
+	}
+
+	footer .wrapper {
+		width: 100%;
+		height: 63px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+}

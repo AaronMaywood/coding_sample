@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Startup Website</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- Google Fonts で発行したコードスニペット -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Roboto&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="page-header">
+		<div class="wrapper">
+			<h1><img class="logo" src="images/logo.svg" width="70" height="48" alt="">Start</h1>
+			<div class="when-desktop">
+				<nav>
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Portfolio</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="when-mobile">
+				<!-- TODO ドロワーの引き出しはa でいいか？ -->
+				<a href="">
+					<img src="images/hamburger.svg" width="35" height="35" alt="グローバルナビゲーションを引き出します。">
+				</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="description">
+				<p class="lead">WELCOME</p>
+				<p class="heading">Lorem ipsum dolor sit amet consectetur</p>
+				<p class="summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+				<button><p>Explore</p></button>
+			</div>
+			<img class="thumbnail" src="images/eyecatch.svg" width="644" height="378" alt="">
+		</div>
+	</header>
+	<div class="flex-column1">
+		<section class="pertners">
+			<div class="flex-column2">
+				<header>
+					<p class="lead">PERTNERS</h2>
+					<h2>Lorem Ipsum Dolor</h2>
+					<p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+				</header>
+				<ul>
+					<li><img src="images/google.svg" width="152" height="50" alt="Google"></li>
+					<li><img src="images/microsoft.svg" width="210" height="45" alt="Microsoft"></li>
+					<li><img src="images/airbnb.svg" width="160" height="50" alt="airbnb"></li>
+					<li><img src="images/facebook.svg" width="196" height="38" alt="facebook"></li>
+					<li><img src="images/spotify.svg" width="167" height="50" alt="Spotify"></li>
+				</ul>
+				<button>
+					<p>Learn More</p>
+				</button>
+			</div>
+		</section>
+		<section class="topic1">
+			<div class="card">
+				<div class="description">
+					<h2>Lorem ipsum dolor sit amet consectetur</h2>
+					<p class="summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+					<button><p>Learn More</p></button>
+				</div>
+				<img class="thumbnail" src="images/image1.svg" width="600" height="431" alt="">
+			</div>
+		</section>
+		<section class="topic2">
+			<div class="card">
+				<div class="description">
+					<h2>Lorem ipsum dolor sit amet consectetur</h2>
+					<p class="summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+					<button><p>Learn More</p></button>
+				</div>
+				<img class="thumbnail" src="images/image2.svg" width="600" height="565" alt="">
+			</div>
+		</section>
+		<section class="team">
+			<div class="flex-column2">
+				<header>
+					<p class="lead">TEAM</h2>
+					<h2>Our Talents</h2>
+					<p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+				</header>
+				<ul>
+					<li>
+						<div class="avatar">
+							<div class="column">
+								<img src="images/avatar1.svg" width="175" height="175" alt="Google">
+								<p class="name">Peg Legge</p>
+								<p class="position">CEO</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="avatar">
+							<div class="column">
+								<img src="images/avatar2.svg" width="175" height="175" alt="Google">
+								<p class="name">Richard Guerra</p>
+								<p class="position">CTO</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="avatar">
+							<div class="column">
+								<img src="images/avatar3.svg" width="175" height="175" alt="Google">
+								<p class="name">Alexandra Stolz</p>
+								<p class="position">DEDSIGNER</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="avatar">
+							<div class="column">
+								<img src="images/avatar4.svg" width="175" height="175" alt="Google">
+								<p class="name">Janet Bray</p>
+								<p class="position">DEVELOPER</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<button>
+					<p>View Team</p>
+				</button>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="wrapper">
+			<ul class="sns">
+				<li><a href="" target="_blank"><img src="images/sns/facebook.svg" height="18" alt="Facebook"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/instagram.svg" height="18" alt="Instagram"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/twitter.svg" height="18" alt="Twitter"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/pinterest.svg" height="18" alt="Pinterest"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/tiktok.svg" height="18" alt="TikTok"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/whatsapp.svg" height="18" alt="WhatsApp"></a></li>
+				<li><a href="" target="_blank"><img src="images/sns/youtube.svg" height="18" alt="YouTube"></a></li>
+			</ul>
+			<p><small>© Start, 2022. All rights reserved.</small></p> <!-- small要素 https://developer.mozilla.org/ja/docs/Web/HTML/Element/small -->
+		</div>
+	</footer>
+</body>
+</html>
