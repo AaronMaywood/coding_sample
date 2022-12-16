@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+/* ボタンのリセット ... https://qiita.com/nabettu/items/1593af04e48444c45c53 より */
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+.when-desktop { display: block; }
+.when-mobile { display: none; }
+
+button {
+	padding: 0.5rem 2rem;
+	border: 1px solid white;
+	border-radius: 10px;
+	color: white;
+	width: fit-content; /* ブロックレベル要素であるbuttonの幅は、
+							通常親要素の100%となる。
+							しかし、内容物の幅とする際には fit-content 値を
+							指定するとよい。
+							つまり外側の親の幅に頼るのではなく、内側の
+							内容物の幅に頼る方法が fit-content である */
+}
+
+.accent {
+	width: 90px;
+	height: 15px;
+	background: white;
+}
+
+body {
+	/* リキッド */
+	width: 100%;
+	max-width: 1440px;
+
+	/* 中央寄せ */
+	margin: 0 auto;
+
+	/* 全体の規定フォントを設定 */
+	font-family: 'Inter', sans-serif;
+}
+
+.firstview {
+	background: url('../images/Background.jpg');
+	color: white;
+	height: 1024px;
+}
+
+.firstview header {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.firstview header h1.logo {
+	font-weight: 900;		/* black */
+	font-size: 1.875rem;	/* 30px */
+}
+
+.firstview header nav ul {
+	width: 724px;
+	font-weight: 500;		/* medium */
+	font-size: 1.125rem;	/* 18px */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.firstview header .when-mobile button {
+	padding: 0;
+	border: none;
+	color: white;
+}
+
+.firstview section {
+	position: absolute;
+	top: 285px;
+	padding: 0 4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 32px
+}
+
+.firstview section h2 {
+	width: 748px; 
+	font-family: 'Libre Caslon Display', serif;
+	font-size: 5.0rem;		/* 80px */
+}
+
+.firstview section > p {
+	width: 528px; 
+	font-weight: 500; /* medium */
+	font-size: 1.125rem;	/* 18px */
+}
+
+section.newest-reads {
+	margin: 4rem;
+}
+
+section.newest-reads h2 {
+	margin-bottom: 44px;
+	font-weight: bold;
+	font-size: 2.5rem;		/* 40px */
+}
+
+section.newest-reads ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.card .thumbnail {
+	width: 100%;
+	height: 352px;
+	background-image: url('../images/thumb1.jpg');
+	background-size: cover;
+}
+
+.card2 .thumbnail {
+	background-image: url('../images/thumb2.jpg');
+}
+
+.card3 .thumbnail {
+	background-image: url('../images/thumb3.jpg');
+}
+
+.card .description {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+}
+
+.card .date {
+	color: #B7B7B7; /* 灰色、年月日 */
+}
+
+.card .title {
+	font-weight: bold;
+	font-size: 1.5625rem;	/* 25px */
+}
+
+.card .read-more {
+	text-align: right;
+		/*
+		text-align: right; の代わりに align-self: flex-end; を使用することもできる
+		このflexにおいて、このアイテムのみflex-end（右寄せ）にするという意味
+		https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#align-self_%E3%81%A7%E5%80%8B%E5%88%A5%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%82%92%E4%BD%8D%E7%BD%AE%E5%90%88%E3%82%8F%E3%81%9B
+		*/
+}
+
+.card .read-more a {
+	color: #D9852C; /* Read more→ */
+}
+
+@media (max-width: 980px) {
+
+	.when-desktop { display: none; }
+	.when-mobile { display: block; }
+
+	.firstview section h2 {
+		font-size: 4.375rem;	/* 70px */
+	}
+
+}
+
+@media (max-width: 748px) {
+
+	.firstview section h2 {
+		width: 100%;
+	}
+
+	.firstview section > p {
+		width: 100%;
+	}
+
+	section.newest-reads ul {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+}
+
+@media (max-width: 580px) {
+
+	.firstview section h2 {
+		font-size: 3.125rem;	/* 50px */
+	}
+
+}
