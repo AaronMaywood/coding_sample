@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>画面の高さいっぱいにする方法２種</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* MEMO code要素はソースコードを示す要素です。 https://developer.mozilla.org/ja/docs/Web/HTML/Element/code */
+		code {
+			background: lightyellow;
+		}
+
+		.full1 {
+			position: fixed;
+			right: 0;				/* 右寄せ */
+			height: 100%;
+			background: lightblue;
+		}
+
+		.full2 {
+			width: 30rem;
+			height: 100%;
+			background: lightgreen;
+			border: 3px solid green;
+		}
+	</style>
+</head>
+<body>
+	<p class="full1">このボックスは画面の高さと同じです。<code>position: fixed; height: 100%;</code></p>
+	<p class="full2">このボックスは画面の高さと同じです。<code>height: 100vh;</code></p>
+	<p class="full2">このボックスは画面の高さと同じです。<code>height: 100vh;</code></p>
+	<p class="full2">このボックスは画面の高さと同じです。<code>height: 100vh;</code></p>
+</body>
+</html>
